@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
@@ -7,19 +6,12 @@ class URI
 {
     static void Main(string[] args)
     {
-        var lines = new List<string>();
-
         while (true)
         {
             string input = Console.ReadLine();
             if (string.IsNullOrEmpty(input)) break;
 
-            lines.Add(input);
-        }
-
-        foreach (var line in lines)
-        {
-            var encodedInput = ASCIIEncoding.ASCII.GetBytes(line);
+            var encodedInput = ASCIIEncoding.ASCII.GetBytes(input);
             var bytesWithFrequences = encodedInput
                 .Distinct()
                 .Select(x => new { Value = x, Count = encodedInput.Count(y => y == x) });
@@ -29,8 +21,6 @@ class URI
 
             foreach (var item in orderedOutput)
                 Console.WriteLine($"{item.Value} {item.Count}");
-
-            Console.WriteLine();
         }
     }
 }

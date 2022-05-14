@@ -10,8 +10,8 @@ class URI
 
         Console.WriteLine("NOTAS:");
 
-        int[] banknotes = { 10000, 5000, 2000, 1000, 500, 200 };
-        foreach (var banknote in banknotes)
+        int[] multipliedBanknotes = { 10000, 5000, 2000, 1000, 500, 200 };
+        foreach (var banknote in multipliedBanknotes)
         {
             Console.WriteLine($"{rest / banknote} nota(s) de R$ {(double)banknote / multiplier:F2}");
             rest %= banknote;
@@ -19,8 +19,8 @@ class URI
 
         Console.WriteLine("MOEDAS:");
 
-        int[] coins = { 100, 50, 25, 10, 5, 1 };
-        foreach (var coin in coins)
+        int[] multipliedCoins = { 100, 50, 25, 10, 5, 1 };
+        foreach (var coin in multipliedCoins)
         {
             Console.WriteLine($"{rest / coin} moeda(s) de R$ {(double)coin / multiplier:F2}");
             rest %= coin;

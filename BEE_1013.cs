@@ -6,8 +6,8 @@ class URI
     static void Main(string[] args)
     {
         int[] inputNumbers = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
-        (int a, int b, int c) = (inputNumbers[0], inputNumbers[1], inputNumbers[2]);
         
+        (int a, int b, int c) = (inputNumbers[0], inputNumbers[1], inputNumbers[2]);
         int m1, m2;
 
         m1 = (a + b + (Math.Abs(a - b))) / 2;

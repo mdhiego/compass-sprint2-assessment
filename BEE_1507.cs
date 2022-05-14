@@ -6,7 +6,7 @@ class URI
     static void Main(string[] args)
     {
         int N = int.Parse(Console.ReadLine());
-
+        
         var testCases = new Dictionary<string, IEnumerable<string>>();
 
         for (int i = 0; i < N; i++)
@@ -14,8 +14,8 @@ class URI
             string testCase = Console.ReadLine();
 
             int Q = int.Parse(Console.ReadLine());
-
             string[] queries = new string[Q];
+
             for (int j = 0; j < Q; j++)
                 queries[j] = Console.ReadLine();
 

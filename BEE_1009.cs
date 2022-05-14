@@ -4,7 +4,7 @@ class URI
 {
     static void Main(string[] args)
     {
-        var sellerName = Console.ReadLine();
+        string sellerName = Console.ReadLine();
         double baseSalary = double.Parse(Console.ReadLine());
         double totalSales = double.Parse(Console.ReadLine());
 

@@ -15,6 +15,7 @@ class URI
             if (string.IsNullOrEmpty(input)) break;
 
             var bytesAndFrequencies = new SortedDictionary<char, int>();
+            
             foreach (char character in input)
             {
                 if (bytesAndFrequencies.ContainsKey(character)) bytesAndFrequencies[character]++;
@@ -26,6 +27,7 @@ class URI
                 .ThenByDescending(x => x.Key);
 
             var answer = new StringBuilder();
+
             foreach (var item in sortedBytesAndFrequencies)
                 answer.Append($"{(int)item.Key} {item.Value}\n");
 

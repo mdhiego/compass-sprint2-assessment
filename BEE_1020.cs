@@ -8,7 +8,6 @@ class URI
         int daysOfLife = int.Parse(Console.ReadLine());
 
         int rest = daysOfLife;
-
         var timeMeasures = new Dictionary<int, string>()
         {
             {365, "ano(s)"},

@@ -14,28 +14,30 @@ class URI
             string input = Console.ReadLine();
             if (string.IsNullOrEmpty(input)) break;
 
-            var bytesAndFrequencies = new SortedDictionary<char, int>();
-            
+            var frequencies = new SortedDictionary<char, int>();
+
             foreach (char character in input)
             {
-                if (bytesAndFrequencies.ContainsKey(character)) bytesAndFrequencies[character]++;
-                else bytesAndFrequencies.Add(character, 1);
+                if (frequencies.ContainsKey(character)) frequencies[character]++;
+                else frequencies.Add(character, 1);
             }
 
-            var sortedBytesAndFrequencies = bytesAndFrequencies
+            var sortedFrequencies = frequencies
                 .OrderBy(x => x.Value)
                 .ThenByDescending(x => x.Key);
 
             var answer = new StringBuilder();
 
-            foreach (var item in sortedBytesAndFrequencies)
+            foreach (var item in sortedFrequencies)
                 answer.Append($"{(int)item.Key} {item.Value}\n");
 
             answers.Add(answer.ToString());
-            answers.Add("\n");
         }
 
-        foreach (string answer in answers)
-            Console.Write(answer);
+        for (int i = 0; i < answers.Count; i++)
+        {
+            Console.Write(answers[i]);
+            if (i != answers.Count - 1) Console.Write("\n");
+        }
     }
 }

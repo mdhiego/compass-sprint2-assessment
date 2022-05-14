@@ -13,7 +13,7 @@ class URI
         int[] banknotes = { 10000, 5000, 2000, 1000, 500, 200 };
         foreach (var banknote in banknotes)
         {
-            Console.WriteLine($"{rest / banknote} nota(s) de R$ {banknote * 1.00 / multiplier:F2}");
+            Console.WriteLine($"{rest / banknote} nota(s) de R$ {(double)banknote / multiplier:F2}");
             rest %= banknote;
         }
 
@@ -22,7 +22,7 @@ class URI
         int[] coins = { 100, 50, 25, 10, 5, 1 };
         foreach (var coin in coins)
         {
-            Console.WriteLine($"{rest / coin} moeda(s) de R$ {coin * 1.00 / multiplier:F2}");
+            Console.WriteLine($"{rest / coin} moeda(s) de R$ {(double)coin / multiplier:F2}");
             rest %= coin;
         }
     }

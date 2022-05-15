@@ -31,8 +31,7 @@ class URI
     {
         int j = 0;
         for (int i = 0; i < word.Length && j < query.Length; i++)
-            if (query[j] == word[i])
-                j++;
+            if (query[j] == word[i]) j++;
 
         return j == query.Length;
     }
